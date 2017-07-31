@@ -1,0 +1,34 @@
+{
+  "name": "bopen-cli",
+  "version": "0.0.0",
+  "description": "A better native open utility. Open URLs, paths and locators in the default or specified browser with options including opening in incognito mode. Cross-platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": {
+    "name": "Alex Greenland",
+    "email": "alex+npm@alexgreenland.com",
+    "url": "ajrg.co"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alexgreenland/bopen-cli.git"
+  },
+  "keywords": [
+    "node",
+    "open",
+    "browser",
+    "cli",
+    "opener",
+    "opens",
+    "launch",
+    "start",
+    "url"
+  ],
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/alexgreenland/bopen-cli/issues"
+  },
+  "homepage": "https://github.com/alexgreenland/bopen-cli#readme"
+}
