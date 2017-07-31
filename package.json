@@ -11,6 +11,9 @@
     "email": "alex+npm@alexgreenland.com",
     "url": "ajrg.co"
   },
+  "engines": {
+    "node": ">=4"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alexgreenland/bopen-cli.git"
@@ -30,5 +33,11 @@
   "bugs": {
     "url": "https://github.com/alexgreenland/bopen-cli/issues"
   },
-  "homepage": "https://github.com/alexgreenland/bopen-cli#readme"
+  "homepage": "https://github.com/alexgreenland/bopen-cli#readme",
+  "dependencies": {
+    "bopen": "^1.0.0"
+  },
+  "devDependencies": {
+    "jest": "^20.0.4"
+  }
 }
