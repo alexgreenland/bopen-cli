@@ -40,6 +40,7 @@
     "yargs": "^8.0.2"
   },
   "devDependencies": {
+    "execa": "^0.7.0",
     "jest": "^20.0.4",
     "yargs-parser": "^7.0.0"
   }
