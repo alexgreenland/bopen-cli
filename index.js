@@ -1,12 +1,11 @@
 #!/usr/bin/env node
 'use strict'
 
-const pkg = require('./package.json')
 const bopen = require('bopen')
 const yargs = require('yargs')
 const chalk = require('chalk')
 const extract = require('./argv')
-  
+
 yargs
   .version()
   .alias('v', 'version')
@@ -44,13 +43,13 @@ yargs
   .usage(`$0. A better native open utility.
 
 Usage: $0 <url|path> [options]`)
-      
+
 const result = extract(yargs.argv)
-      
+
 if (result instanceof Error) {
   console.error(chalk.red.bold(result.message))
   yargs.showHelp()
   process.exit(1)
 }
-    
+
 bopen(result.location, result.options)
