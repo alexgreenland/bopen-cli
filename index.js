@@ -4,34 +4,50 @@
 const pkg = require('./package.json')
 const bopen = require('bopen')
 const yargs = require('yargs')
+const chalk = require('chalk')
 const extract = require('./argv')
   
+yargs
+  .option('i', {
+    alias: 'incognito',
+    describe: 'Open in incognito/private mode',
+    type: 'boolean'
+  })
+  .option('b', {
+    alias: 'browser',
+    describe: 'Browser to launch URL with',
+    choices: ['chrome', 'firefox', 'ie', 'edge', 'safari']
+  })
+  .option('a', {
+    alias: 'app',
+    describe: 'App to launch location with'
+  })
+  .option('t', {
+    alias: 'targs',
+    describe: 'Target app arguments, use --targs="ARGS" format'
+  })
+  .option('o', {
+    alias: 'oargs',
+    describe: 'Opener arguments, use --oargs="ARGS" format'
+  })
+  .help('help')
+  .alias('h', 'help')
+  .example('$0 http://example.com', 'Open webpage in default browser')
+  .example('$0 image.png', 'Open file in default viewer')
+  .example('$0 http://example.com chrome', 'Open in Chrome')
+  .example('$0 http://example.com firefox', 'Open in Firefox')
+  .example('$0 http://example.com chrome -i', 'Open with Chrome in incognito')
+  .example('$0 http://example.com ie --incognito', 'Open in IE with InPrivate')
+  .example('$0 http://example.com --targs="-n"', 'Open with target app args')
+  .usage(`$0. A better native open utility.
 
-    
-    
-  // cli
-  //   .version(pkg.version)
-  //   .option('-i, --incognito', 'open the URL in incognito/private mode', false)
-  //   .option('-b, --browser [name]', 'browser to launch, such as "chrome", "ie", etc.')
-  //   .option('-a, --app [name]', 'app to launch (platform-dependent name)')
-  //   .option('-t, --targs ["args..."]', 'arguments to the target application', list, [])
-  //   .option('-o, --oargs ["args..."]', 'arguments to the opener', list, [])
-  //   .usage(`<url|path> [options]
-  //
-  //     A better native open utility.
-  //
-  //     $ bopen http://example.com
-  //     $ bopen http://example.com chrome
-  //     $ bopen http://example.com firefox
-  //     $ bopen http://example.com chrome --incognito
-  //     $ bopen http://example.com ie --incognito
-  //     $ bopen http://example.com --targs "-n"`)
-  //   .parse(process.argv)
-    
+Usage: $0 <url|path> [options]`)
+      
 const result = extract(yargs.argv)
-  
+      
 if (result instanceof Error) {
-  console.error(result.message)
+  console.error(chalk.red.bold(result.message))
+  yargs.showHelp()
   process.exit(1)
 }
     

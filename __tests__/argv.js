@@ -71,12 +71,12 @@ test('will call bopen with the location, incognito, app and opener args', () => 
 })
 
 test('will call bopen with the location, incognito, app, opener args and target app args', () => {
-  expect(extract(argv('http://example.com --incognito --app "google chrome" --oargs="--oarg1 value --oarg2" --targs="--targ1 value --targ2"'))).toEqual({
+  expect(extract(argv('http://example.com --incognito --app safari --oargs="--oarg1 value --oarg2" --targs="--targ1 value --targ2"'))).toEqual({
     location: 'http://example.com',
     options: {
       incognito: true,
       browser: undefined,
-      app: 'google chrome',
+      app: 'safari',
       args: ['--oarg1', 'value', '--oarg2'],
       appArgs: ['--targ1', 'value', '--targ2']
     }
