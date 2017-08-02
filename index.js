@@ -8,6 +8,8 @@ const chalk = require('chalk')
 const extract = require('./argv')
   
 yargs
+  .version()
+  .alias('v', 'version')
   .option('i', {
     alias: 'incognito',
     describe: 'Open in incognito/private mode',
