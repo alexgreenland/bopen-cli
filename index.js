@@ -35,10 +35,10 @@ yargs
   .alias('h', 'help')
   .example('$0 http://example.com', 'Open webpage in default browser')
   .example('$0 image.png', 'Open file in default viewer')
-  .example('$0 http://example.com chrome', 'Open in Chrome')
-  .example('$0 http://example.com firefox', 'Open in Firefox')
-  .example('$0 http://example.com chrome -i', 'Open with Chrome in incognito')
-  .example('$0 http://example.com ie --incognito', 'Open in IE with InPrivate')
+  .example('$0 http://example.com -b chrome', 'Open in Chrome')
+  .example('$0 http://example.com -b firefox', 'Open in Firefox')
+  .example('$0 http://example.com -b chrome -i', 'Open with Chrome in incognito')
+  .example('$0 http://example.com -b ie -i', 'Open in IE with InPrivate')
   .example('$0 http://example.com --targs="-n"', 'Open with target app args')
   .usage(`$0. A better native open utility.
 
