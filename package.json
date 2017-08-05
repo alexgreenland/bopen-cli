@@ -8,6 +8,9 @@
     "coverage": "jest --coverage",
     "cleanup": "eslint *.js **/*.js --fix; exit 0"
   },
+  "bin": {
+    "bopen": "index.js"
+  },
   "author": {
     "name": "Alex Greenland",
     "email": "alex+npm@alexgreenland.com",
