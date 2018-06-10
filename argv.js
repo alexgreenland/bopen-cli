@@ -21,6 +21,7 @@ module.exports = (argv) => {
     location: location,
     options: {
       incognito: !!argv.incognito,
+      background: !!argv.background,
       browser: argv.browser,
       app: argv.app,
       args: oargs,

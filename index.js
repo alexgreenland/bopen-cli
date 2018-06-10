@@ -14,6 +14,11 @@ yargs
     describe: 'Open in incognito/private mode',
     type: 'boolean'
   })
+  .option('g', {
+    alias: 'background',
+    describe: 'Open in background',
+    type: 'boolean'
+  })
   .option('b', {
     alias: 'browser',
     describe: 'Browser to launch URL with',

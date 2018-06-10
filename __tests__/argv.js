@@ -10,6 +10,7 @@ test('will call bopen with the location', () => {
     location: 'http://example.com',
     options: {
       incognito: false,
+      background: false,
       browser: undefined,
       app: undefined,
       args: [],
@@ -23,6 +24,21 @@ test('will call bopen with the location and incognito', () => {
     location: 'http://example.com',
     options: {
       incognito: true,
+      background: false,
+      browser: undefined,
+      app: undefined,
+      args: [],
+      appArgs: []
+    }
+  })
+})
+
+test('will call bopen with the location and background', () => {
+  expect(extract(argv('http://example.com --background'))).toEqual({
+    location: 'http://example.com',
+    options: {
+      incognito: false,
+      background: true,
       browser: undefined,
       app: undefined,
       args: [],
@@ -36,6 +52,7 @@ test('will call bopen with the location, incognito and browser', () => {
     location: 'http://example.com',
     options: {
       incognito: true,
+      background: false,
       browser: 'chrome',
       app: undefined,
       args: [],
@@ -49,6 +66,7 @@ test('will call bopen with the location, incognito and app', () => {
     location: 'http://example.com',
     options: {
       incognito: true,
+      background: false,
       browser: undefined,
       app: 'google chrome',
       args: [],
@@ -62,6 +80,7 @@ test('will call bopen with the location, incognito, app and opener args', () => 
     location: 'http://example.com',
     options: {
       incognito: true,
+      background: false,
       browser: undefined,
       app: 'google chrome',
       args: ['--oarg1', 'value', '--oarg2'],
@@ -75,6 +94,7 @@ test('will call bopen with the location, incognito, app, opener args and target 
     location: 'http://example.com',
     options: {
       incognito: true,
+      background: false,
       browser: undefined,
       app: 'safari',
       args: ['--oarg1', 'value', '--oarg2'],
