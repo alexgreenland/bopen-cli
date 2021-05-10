@@ -4,6 +4,5 @@
       "jest": true
     },
     "extends": [
-     "standard"
     ]
 }
