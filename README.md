@@ -1,6 +1,6 @@
 # bopen-cli
 
-[![npm version](https://badge.fury.io/js/bopen-cli.svg)](https://www.npmjs.com/package/bopen-cli) [![Travis](https://img.shields.io/travis/alexgreenland/bopen-cli.svg)]()
+[![npm version](https://badge.fury.io/js/bopen-cli.svg)](https://www.npmjs.com/package/bopen-cli)
 
 A better native open utility for macOS and Windows, with emphasis on browsers and sugar for common configuration. Open URLs, file paths and other locators as supported by your system. 
 
