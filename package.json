@@ -40,7 +40,7 @@
   },
   "homepage": "https://github.com/alexgreenland/bopen-cli#readme",
   "dependencies": {
-    "bopen": "2.5.0",
+    "bopen": "2.6.0",
     "chalk": "4.1.1",
     "yargs": "17.0.1"
   },
